@@ -1,34 +1,34 @@
-class NhanVien:
-    LUONG_MAX = 20000  
-    def __init__(self, tenNhanVien, luongCoBan, heSoLuong):
-        self.tenNhanVien = tenNhanVien
-        self.luongCoBan = luongCoBan
-        self.heSoLuong = heSoLuong
-    def getTenNhanVien(self):
-        return self.tenNhanVien
-    def setTenNhanVien(self, ten):
-        self.tenNhanVien = ten
-    def getLuongCoBan(self):
-        return self.luongCoBan
-    def setLuongCoBan(self, luong):
-        self.luongCoBan = luong
-    def getHeSoLuong(self):
-        return self.heSoLuong
-    def setHeSoLuong(self, hsl):
-        self.heSoLuong = hsl
-    def tinhLuong(self):
-        return self.luongCoBan * self.heSoLuong
-    def inTTin(self):
-        print(f"Tên: {self.tenNhanVien}")
-        print(f"Lương cơ bản: {self.luongCoBan}")
-        print(f"Hệ số lương: {self.heSoLuong}")
-        print(f"Lương thực nhận: {self.tinhLuong()}")
-    def tangLuong(self, delta):
-        luong_moi = self.tinhLuong() + delta
-        if luong_moi > NhanVien.LUONG_MAX:
-            print("Không thể tăng lương: vượt quá LUONG_MAX!")
-            return False
-        else:
-            self.heSoLuong = luong_moi / self.luongCoBan
-            print("Tăng lương thành công.")
-            return True
+class SieuNhan:
+    ten = str
+    tuoi = int
+    nangluc = str
+    nhiem_vu_hoan_thanh = int 
+    nhiem_vu_that_bai = int
+
+    def __init__(self, ten, tuoi, nangluc, nhiem_vu_hoan_thanh, nhiem_vu_that_bai):
+        self.ten = ten
+        self.tuoi = tuoi
+        self.nangluc = nangluc
+        self.nhiem_vu_hoan_thanh = nhiem_vu_hoan_thanh
+        self.nhiem_vu_that_bai = nhiem_vu_that_bai
+
+    def __str__(self):
+        return f"{self.ten} | {self.tuoi} | {self.nangluc} | {self.nhiem_vu_hoan_thanh} | {self.nhiem_vu_that_bai}"
+    
+danhsach = []
+soluong = 0
+while True:
+    soluong += 1
+    print("Nhap 'quit' de thoat")
+    ten = input("Tên: ")
+    if (ten.lower()== 'quit'):
+        break
+    tuoi = int(input("Tuổi: "))
+    nangluc = input("Năng lực: ")
+    nhiem_vu_hoan_thanh = int(input("Nhiệm vụ hoàn thành: "))
+    nhiem_vu_that_bai = int(input("Nhiệm vụ thất bại: "))
+    sieu_nhan = SieuNhan(ten, tuoi, nangluc, nhiem_vu_hoan_thanh, nhiem_vu_that_bai)
+    danhsach.append(sieu_nhan)
+
+for sn in danhsach:
+    print (f"Danh sach cac sieu nhan la \n{sn}")
