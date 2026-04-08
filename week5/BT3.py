@@ -67,3 +67,4 @@ else:
     print(f"\nKhông tìm thấy cán bộ với tên '{ho_ten_can_tim}'")
 # Thoát chương trình
 qlcb.thoat_chuong_trinh()
+print("Chương trình kết thúc.")
