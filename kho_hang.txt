@@ -1,0 +1,3 @@
+[Điện máy] DM01 | Tủ lạnh | 15,000,000đ | BH: 24T | 220V | 150W
+[Sành sứ] SS01 | Bình hoa | 500,000đ | Nguyên liệu: Gốm
+[Thực phẩm] TP01 | Sữa tươi | 30,000đ | NSX: 01/01/2024 | HSD: 01/01/2025
