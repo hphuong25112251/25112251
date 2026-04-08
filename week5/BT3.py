@@ -49,7 +49,7 @@ class QuanLyCanBo():
         print("Thoát chương trình") 
 
 # Khởi tạo quản lý cán bộ
-qlcb = QuanLyCanBo()        
+qlcb = QuanLyCanBo()
 # Thêm cán bộ
 qlcb.them_moi_can_bo(CongNhan("Nguyễn Văn Đinh", 30, "Nam", "Hà Nội", 5))
 qlcb.them_moi_can_bo(KySu("Trần Thị HH", 28, "Nữ", "Hà Nội", "Công nghệ thông tin"))
