@@ -107,3 +107,4 @@ if __name__ == "__main__":
         print(f"Lỗi: {e.message}")
     except ValueError:
         print("Lỗi: Vui lòng nhập số nguyên hợp lệ.")
+print("\nChương trình kết thúc.")
