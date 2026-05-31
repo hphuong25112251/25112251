@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lessons</title>
+</head>
+<body>
+
+<h1>Level {{ level }}</h1>
+
+<ul>
+
+{% for lesson in lessons %}
+
+<li>
+    <a href="/lesson/{{ loop.index }}">
+        {{ lesson }}
+    </a>
+</li>
+
+{% endfor %}
+
+</ul>
+
+<a href="/">Back</a>
+
+</body>
+</html>
